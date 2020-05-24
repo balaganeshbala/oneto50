@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AlegreyaSans-Bold.ttf">
+            <string>AlegreyaSans-Bold</string>
+        </array>
+        <array key="AlegreyaSans-Medium.ttf">
+            <string>AlegreyaSans-Medium</string>
+        </array>
+        <array key="AlegreyaSans-Regular.ttf">
+            <string>AlegreyaSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="One_to_50" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hdp-Qq-B78">
+                                <rect key="frame" x="20" y="266" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hdp-Qq-B78" secondAttribute="height" multiplier="1:1" id="Vkp-6R-9dj"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="OFr-SI-2k0">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridViewCell" id="nMr-23-Bfg" customClass="GridViewCell" customModule="One_to_50" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gIT-HN-k3r">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIP-uh-awn">
+                                                    <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                                    <fontDescription key="fontDescription" name="AlegreyaSans-Medium" family="Alegreya Sans" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gIP-uh-awn" secondAttribute="bottom" constant="10" id="CAx-18-pl8"/>
+                                                <constraint firstAttribute="trailing" secondItem="gIP-uh-awn" secondAttribute="trailing" constant="10" id="GGX-Sx-Qqg"/>
+                                                <constraint firstItem="gIP-uh-awn" firstAttribute="leading" secondItem="gIT-HN-k3r" secondAttribute="leading" constant="10" id="qDw-qb-5J0"/>
+                                                <constraint firstItem="gIP-uh-awn" firstAttribute="top" secondItem="gIT-HN-k3r" secondAttribute="top" constant="10" id="svW-fu-3pp"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="valueLabel" destination="gIP-uh-awn" id="t5a-xJ-Jdg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1O1-mz-Ruq">
+                                <rect key="frame" x="20" y="64" width="54" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="WcO-Is-csZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYI-8S-mbf">
+                                <rect key="frame" x="20" y="98" width="110" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XH1-AS-Ttt"/>
+                                    <constraint firstAttribute="width" constant="110" id="drk-zl-ux5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Medium" family="Alegreya Sans" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WN5-2z-fsU">
+                                <rect key="frame" x="20" y="807" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="aTi-0S-ez4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="20"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idj-DF-W3D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WN5-2z-fsU" secondAttribute="trailing" constant="20" id="38Q-bJ-ete"/>
+                            <constraint firstItem="AYI-8S-mbf" firstAttribute="top" secondItem="1O1-mz-Ruq" secondAttribute="bottom" constant="10" id="AWY-2x-X2k"/>
+                            <constraint firstItem="Hdp-Qq-B78" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Qbz-zK-VW3"/>
+                            <constraint firstItem="Hdp-Qq-B78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aO0-ZZ-CzH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hdp-Qq-B78" secondAttribute="trailing" constant="20" id="eaW-et-cjV"/>
+                            <constraint firstItem="WN5-2z-fsU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ecB-OA-Agq"/>
+                            <constraint firstItem="1O1-mz-Ruq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gUF-ON-H4f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WN5-2z-fsU" secondAttribute="bottom" constant="20" id="jfw-if-gbS"/>
+                            <constraint firstItem="AYI-8S-mbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l79-2V-QH5"/>
+                            <constraint firstItem="1O1-mz-Ruq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y68-cC-wH5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="numbersGridView" destination="Hdp-Qq-B78" id="eJQ-vi-qD0"/>
+                        <outlet property="restartButton" destination="WN5-2z-fsU" id="Il8-2k-qoE"/>
+                        <outlet property="timerLabel" destination="AYI-8S-mbf" id="9ue-op-G8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117.39130434782609" y="63.616071428571423"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="Zuo-Xe-U12">
+            <objects>
+                <viewController storyboardIdentifier="ScoreViewController" id="Zst-1B-4AA" customClass="ScoreViewController" customModule="One_to_50" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8uc-H6-NxM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUU-nL-ZTx">
+                                <rect key="frame" x="20" y="433" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DfR-4k-tq8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Bold" family="Alegreya Sans" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFJ-dI-1jq">
+                                <rect key="frame" x="156" y="383" width="102" height="30"/>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVz-7l-G3b">
+                                <rect key="frame" x="20" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="54e-0z-ooa"/>
+                                    <constraint firstAttribute="height" constant="40" id="HCE-CD-4vA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="28"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Zst-1B-4AA" eventType="touchUpInside" id="S18-sB-GAW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-qe-gZ9">
+                                <rect key="frame" x="30" y="493" width="354" height="30"/>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bcZ-js-QUD" firstAttribute="trailing" secondItem="YUU-nL-ZTx" secondAttribute="trailing" constant="20" id="2me-s2-7CJ"/>
+                            <constraint firstItem="YUU-nL-ZTx" firstAttribute="centerY" secondItem="bcZ-js-QUD" secondAttribute="centerY" id="Acf-3I-CAi"/>
+                            <constraint firstItem="jFJ-dI-1jq" firstAttribute="centerX" secondItem="bcZ-js-QUD" secondAttribute="centerX" id="ET4-O7-Ipg"/>
+                            <constraint firstItem="RVz-7l-G3b" firstAttribute="leading" secondItem="bcZ-js-QUD" secondAttribute="leading" constant="20" id="Oh2-7Q-Ptv"/>
+                            <constraint firstItem="RbW-qe-gZ9" firstAttribute="leading" secondItem="bcZ-js-QUD" secondAttribute="leading" constant="30" id="Pa6-JU-Aec"/>
+                            <constraint firstItem="YUU-nL-ZTx" firstAttribute="leading" secondItem="bcZ-js-QUD" secondAttribute="leading" constant="20" id="PfZ-9J-gbg"/>
+                            <constraint firstItem="RVz-7l-G3b" firstAttribute="top" secondItem="bcZ-js-QUD" secondAttribute="top" constant="20" id="Tyq-Lm-r9i"/>
+                            <constraint firstItem="RbW-qe-gZ9" firstAttribute="top" secondItem="YUU-nL-ZTx" secondAttribute="bottom" constant="20" id="Yxm-ag-OQF"/>
+                            <constraint firstItem="bcZ-js-QUD" firstAttribute="trailing" secondItem="RbW-qe-gZ9" secondAttribute="trailing" constant="30" id="evq-OI-nGM"/>
+                            <constraint firstItem="YUU-nL-ZTx" firstAttribute="top" secondItem="jFJ-dI-1jq" secondAttribute="bottom" constant="20" id="jf6-Iz-suh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bcZ-js-QUD"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="RVz-7l-G3b" id="Kno-qW-4rR"/>
+                        <outlet property="scoreCommentLabel" destination="RbW-qe-gZ9" id="I3Z-fJ-Vdv"/>
+                        <outlet property="scoreLabel" destination="YUU-nL-ZTx" id="JX4-6j-Sew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sr-7Z-6cK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.40579710144937" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+</document>
